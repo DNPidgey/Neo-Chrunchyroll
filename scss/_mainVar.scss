@@ -1,0 +1,39 @@
+/*---------------------Color Palette Chart---------------------*/
+$orangeGradient: radial-gradient(100% 264.06% at 0% 0%, #EDB931 0%, #EDB831 6.67%, #ECB631 13.33%, #ECB231 20%, #EBAC30 26.67%, #E9A530 33.33%, #E89C30 40%, #E6922F 46.67%, #E4882F 53.33%, #E27E2E 60%, #E1752E 66.67%, #DF6E2E 73.33%, #DE682D 80%, #DE642D 86.67%, #DD622D 93.33%, #DD612D 100%);
+$greenGradient: radial-gradient(286.13% 100% at 0% 0%, #47D6D8 0%, #2FB5B7 69.79%, #118183 100%);
+$blackVerticalGradient: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, #000000 100%);
+$grey70: rgba(117, 117, 117, 0.8);
+$orangeFontColor: #EAA930;
+$greenFontColor: #47D6D8;
+$blackFontColor: #000000;
+$whiteFontColor: #ffffff;
+
+/*---------------------Font Characteristics---------------------*/
+$fontCustom: 'Inter';
+$fontWeight: ("regular":400, "bold":700);
+$fontSize: ("medium":12px, "big":20px);
+$fontStyle: ("normal":none, "upper":uppercase);
+
+/*---------------------Main Configs for Fonts. Change just if necessary modify the main format of the fonts---------------------*/
+@mixin H1 {
+	font-family: $fontCustom;
+	font-weight: map-get($fontWeight, bold);
+	font-size: map-get($fontSize, big);
+	text-transform: map-get($fontStyle, upper);
+}
+
+@mixin H2 {
+	font-family: $fontCustom;
+	font-weight: map-get($fontWeight, bold);
+	font-size: map-get($fontSize, medium);
+	text-transform: map-get($fontStyle, upper);
+}
+
+@mixin pText {
+	font-family: $fontCustom;
+	font-weight: map-get($fontWeight, regular);
+	font-size: map-get($fontSize, medium);
+}
+
+/*---------------------Imported Fonts---------------------*/
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900);

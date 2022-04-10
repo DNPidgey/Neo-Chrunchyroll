@@ -1,0 +1,32 @@
+@import "mainVar";
+
+.animeCard {
+	background: black;
+
+	&_titleH1 {
+		@include H1;
+		color: $whiteFontColor;
+	}
+
+	&_titleH2 {
+		@include H2;
+		color: $whiteFontColor;
+	}
+
+	&_extraInfo {
+		@include pText;
+		color: $orangeFontColor;
+		text-transform: map-get($fontStyle, upper);
+	}
+
+	&_animeType {
+		@include pText;
+		color: $greenFontColor;
+		text-transform: map-get($fontStyle, upper);
+	}
+
+	&_aboutText {
+		@include pText;
+		color: $whiteFontColor;
+	}
+}
