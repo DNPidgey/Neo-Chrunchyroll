@@ -2,29 +2,23 @@
 	background: black;
 
 	&_titleH1 {
-		@include H1;
-		color: $whiteFontColor;
+		@include H1($whiteFontColor);
+
 	}
 
 	&_titleH2 {
-		@include H2;
-		color: $whiteFontColor;
+		@include H2($whiteFontColor);
 	}
 
 	&_extraInfo {
-		@include pText;
-		color: $orangeFontColor;
-		text-transform: map-get($fontStyle, upper);
+		@include pText($orangeFontColor, upper);
 	}
 
 	&_animeType {
-		@include pText;
-		color: $greenFontColor;
-		text-transform: map-get($fontStyle, upper);
+		@include pText($greenFontColor, upper);
 	}
 
 	&_aboutText {
-		@include pText;
-		color: $whiteFontColor;
+		@include pText($whiteFontColor, normal);
 	}
 }

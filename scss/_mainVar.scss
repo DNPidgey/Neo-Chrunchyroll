@@ -15,24 +15,28 @@ $fontSize: ("medium":12px, "big":20px);
 $fontStyle: ("normal":none, "upper":uppercase);
 
 /*---------------------Main Configs for Fonts. Change just if necessary modify the main format of the fonts---------------------*/
-@mixin H1 {
+@mixin H1 ($color) {
 	font-family: $fontCustom;
 	font-weight: map-get($fontWeight, bold);
 	font-size: map-get($fontSize, big);
 	text-transform: map-get($fontStyle, upper);
+	color: $color;
 }
 
-@mixin H2 {
+@mixin H2 ($color) {
 	font-family: $fontCustom;
 	font-weight: map-get($fontWeight, bold);
 	font-size: map-get($fontSize, medium);
 	text-transform: map-get($fontStyle, upper);
+	color: $color;
 }
 
-@mixin pText {
+@mixin pText ($color, $style) {
 	font-family: $fontCustom;
 	font-weight: map-get($fontWeight, regular);
 	font-size: map-get($fontSize, medium);
+	text-transform: map-get($fontStyle, $style);
+	color: $color;
 }
 
 /*---------------------Imported Fonts---------------------*/
