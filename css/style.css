@@ -1,8 +1,6 @@
 /*---------------------Color Palette Chart---------------------*/
 /*---------------------Font Characteristics---------------------*/
 /*---------------------Main Configs for Fonts. Change just if necessary modify the main format of the fonts---------------------*/
-/*---------------------Imported Fonts---------------------*/
-@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900);
 body {
   background: black;
 }
