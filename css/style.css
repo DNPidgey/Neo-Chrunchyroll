@@ -1,51 +1,199 @@
 /*---------------------Color Palette Chart---------------------*/
 /*---------------------Font Characteristics---------------------*/
 /*---------------------Main Configs for Fonts. Change just if necessary modify the main format of the fonts---------------------*/
+/*---------------------Anime Card Configs---------------------*/
 body {
-  background: black;
+  background-color: black;
+  background-size: cover;
+  background-position: top left;
+  background-repeat: no-repeat;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  background-image: url("../img/bg.jpg");
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .animeCard {
-  background: black;
+  min-width: 262px;
+  max-width: 262px;
+  min-height: 368px;
+  max-height: 368px;
+  border-radius: 15px;
+  background-image: url("../img/drStone.jpg");
+  overflow: hidden;
 }
 
-.animeCard_titleH1 {
+.animeCard_blackGradient {
+  min-width: 262px;
+  max-width: 262px;
+  min-height: 368px;
+  max-height: 368px;
+  border-radius: 0px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(#000000));
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, #000000 100%);
+  padding: 20px 10px 0px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.animeCard_cardTitle {
   font-family: "Inter";
   font-weight: 700;
   font-size: 20px;
   text-transform: uppercase;
   color: #ffffff;
+  line-height: 24px;
+  text-align: center;
+  width: 100%;
 }
 
-.animeCard_titleH2 {
+.animeCard_info {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: inherit;
+      -ms-flex-align: inherit;
+          align-items: inherit;
+}
+
+.animeCard_info_extraInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.animeCard_info_extraInfo_synopsis {
   font-family: "Inter";
   font-weight: 700;
   font-size: 12px;
   text-transform: uppercase;
   color: #ffffff;
+  line-height: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.animeCard_extraInfo {
+.animeCard_info_extraInfo_rightSide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.animeCard_info_extraInfo_rightSide_subtitle {
   font-family: "Inter";
   font-weight: 400;
   font-size: 12px;
   text-transform: uppercase;
   color: #EAA930;
+  line-height: 15px;
+  margin-right: 5px;
 }
 
-.animeCard_animeType {
+.animeCard_info_extraInfo_rightSide_typeMedia {
   font-family: "Inter";
   font-weight: 400;
   font-size: 12px;
   text-transform: uppercase;
   color: #47D6D8;
+  line-height: 15px;
+  margin-right: 5px;
 }
 
-.animeCard_aboutText {
+.animeCard_info_synopsisText {
   font-family: "Inter";
   font-weight: 400;
   font-size: 12px;
   text-transform: none;
   color: #ffffff;
+  line-height: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin-top: 10px;
 }
+
+/* .animeCard {
+	background: black;
+
+	&_titleH1 {
+		@include H1($whiteFontColor);
+
+	}
+
+	&_titleH2 {
+		@include H2($whiteFontColor);
+	}
+
+	&_extraInfo {
+		@include pText($orangeFontColor, upper);
+	}
+
+	&_animeType {
+		@include pText($greenFontColor, upper);
+	}
+
+	&_aboutText {
+		@include pText($whiteFontColor, normal);
+	}
+} */
 /*# sourceMappingURL=style.css.map */

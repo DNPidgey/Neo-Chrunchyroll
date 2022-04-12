@@ -1,4 +1,79 @@
 .animeCard {
+	@include animeCardFormat(15px);
+	@include imgBG($imgPath, "drStone.jpg");
+	overflow: hidden;
+
+	&_blackGradient {
+		@include animeCardFormat(0px);
+		background: $blackVerticalGradient;
+		padding: 20px 10px 0px 10px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	&_cardTitle {
+		@include H1($whiteFontColor);
+		text-align: center;
+		width: 100%;
+	}
+
+	&_info {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: inherit;
+
+		&_extraInfo {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+
+			&_synopsis {
+				@include pText ($whiteFontColor, upper, bold);
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+			}
+
+			&_rightSide {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: center;
+
+				&_subtitle {
+					@include pText($orangeFontColor, upper, regular);
+					margin-right: 5px;
+				}
+
+				&_typeMedia {
+					@include pText($greenFontColor, upper, regular);
+					margin-right: 5px;
+				}
+			}
+
+		}
+
+		&_synopsisText {
+			@include pText($whiteFontColor, normal, regular);
+			display: flex;
+			flex-direction: column;
+			justify-content: end;
+			align-items: flex-end;
+			margin-top: 10px;
+		}
+	}
+
+	&_timeLine {}
+
+	&_playButton {}
+}
+
+/* .animeCard {
 	background: black;
 
 	&_titleH1 {
@@ -21,4 +96,4 @@
 	&_aboutText {
 		@include pText($whiteFontColor, normal);
 	}
-}
+} */

@@ -21,6 +21,7 @@ $fontStyle: ("normal":none, "upper":uppercase);
 	font-size: map-get($fontSize, big);
 	text-transform: map-get($fontStyle, upper);
 	color: $color;
+	line-height: 24px;
 }
 
 @mixin H2 ($color) {
@@ -29,12 +30,32 @@ $fontStyle: ("normal":none, "upper":uppercase);
 	font-size: map-get($fontSize, medium);
 	text-transform: map-get($fontStyle, upper);
 	color: $color;
+	line-height: 15px;
 }
 
-@mixin pText ($color, $style) {
+@mixin pText ($color, $style, $weight) {
 	font-family: $fontCustom;
-	font-weight: map-get($fontWeight, regular);
+	font-weight: map-get($fontWeight, $weight);
 	font-size: map-get($fontSize, medium);
 	text-transform: map-get($fontStyle, $style);
 	color: $color;
+	line-height: 15px;
 }
+
+/*---------------------Anime Card Configs---------------------*/
+$imgPath: "../img/";
+$iconPath: "../icon";
+
+@mixin imgBG($path, $imgName_ext) {
+	background-image: url("#{$path}#{$imgName_ext}");
+}
+
+@mixin animeCardFormat($borderRadius) {
+	min-width: 262px;
+	max-width: 262px;
+	min-height: 368px;
+	max-height: 368px;
+	border-radius: $borderRadius;
+}
+
+@mixin name {}
