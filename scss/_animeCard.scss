@@ -1,99 +1,108 @@
-.animeCard {
-	@include animeCardFormat(15px);
-	@include imgBG($imgPath, "drStone.jpg");
+.animeCardHover {
+	width: 262px;
+	height: 368px;
+	border-radius: $borderRadius_allCorners;
 	overflow: hidden;
+	@include imgBG($imgPath, "drStone.jpg");
 
-	&_blackGradient {
-		@include animeCardFormat(0px);
-		background: $blackVerticalGradient;
-		padding: 20px 10px 0px 10px;
+	&_insideCard {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-	}
+		align-items: center;
 
-	&_cardTitle {
-		@include H1($whiteFontColor);
-		text-align: center;
-		width: 100%;
-	}
-
-	&_info {
-		width: 100%;
-		height: 100%;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		align-items: inherit;
-
-		&_extraInfo {
-			display: flex;
-			flex-direction: row;
-			justify-content: space-between;
-			align-items: center;
-
-			&_synopsis {
-				@include pText ($whiteFontColor, upper, bold);
-				display: flex;
-				flex-direction: row;
-				align-items: center;
-			}
-
-			&_rightSide {
-				display: flex;
-				flex-direction: row;
-				justify-content: space-between;
-				align-items: center;
-
-				&_subtitle {
-					@include pText($orangeFontColor, upper, regular);
-					margin-right: 5px;
-				}
-
-				&_typeMedia {
-					@include pText($greenFontColor, upper, regular);
-					margin-right: 5px;
-				}
-			}
-
-		}
-
-		&_synopsisText {
-			@include pText($whiteFontColor, normal, regular);
+		&_blackGradient {
+			height: 308px;
+			width: 100%;
 			display: flex;
 			flex-direction: column;
-			justify-content: end;
-			align-items: flex-end;
-			margin-top: 10px;
+			justify-content: space-between;
+			align-items: center;
+			background: $blackVerticalGradient;
+
+			&_animeTitle {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				padding: 15px 10px 10px 10px;
+				@include typography-styles-headline5 ($whiteFontColor);
+			}
+
+			&_bottomInfo {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-end;
+				align-items: center;
+				padding: 0px 10px 10px 10px;
+
+				&_timeline {
+					display: flex;
+					flex-direction: row;
+					justify-content: center;
+					align-items: flex-end;
+				}
+
+				&_animeInfo {
+					display: flex;
+					flex-direction: column;
+					justify-content: flex-end;
+					align-items: center;
+
+					&_topInfo {
+						width: 100%;
+						padding: 0 0 10px;
+						display: flex;
+						flex-direction: row;
+						justify-content: space-between;
+						align-items: flex-start;
+
+						&_synopsisTitle {
+							display: flex;
+							flex-direction: row;
+							align-items: center;
+							@include typography-styles-subtitle2($whiteFontColor);
+						}
+
+						&_extraInfo {
+							width: 148px;
+							max-width: 148px;
+							display: flex;
+							flex-direction: row;
+							justify-content: space-between;
+							align-items: center;
+
+							&_subtitle {
+								@include typography-styles-subtitle1($orangeFontColor);
+							}
+
+							&_mediaType {
+								@include typography-styles-subtitle1($greenFontColor);
+							}
+						}
+					}
+
+					&_synopsisText {
+						width: 100%;
+						display: flex;
+						flex-direction: row;
+						align-items: flex-start;
+						@include typography-styles-body2 ($whiteFontColor);
+					}
+				}
+			}
+		}
+
+		&_playButton {
+			background: $greenGradient;
+			min-height: 60px;
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
 		}
 	}
-
-	&_timeLine {}
-
-	&_playButton {}
 }
-
-/* .animeCard {
-	background: black;
-
-	&_titleH1 {
-		@include H1($whiteFontColor);
-
-	}
-
-	&_titleH2 {
-		@include H2($whiteFontColor);
-	}
-
-	&_extraInfo {
-		@include pText($orangeFontColor, upper);
-	}
-
-	&_animeType {
-		@include pText($greenFontColor, upper);
-	}
-
-	&_aboutText {
-		@include pText($whiteFontColor, normal);
-	}
-} */

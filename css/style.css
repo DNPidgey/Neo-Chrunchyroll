@@ -18,25 +18,52 @@ body {
           box-sizing: border-box;
 }
 
-.animeCard {
-  min-width: 262px;
-  max-width: 262px;
-  min-height: 368px;
-  max-height: 368px;
-  border-radius: 15px;
-  background-image: url("../img/drStone.jpg");
+.animeCardHover {
+  width: 262px;
+  height: 368px;
+  border-radius: 10px;
   overflow: hidden;
+  background-image: url("../img/drStone.jpg");
 }
 
-.animeCard_blackGradient {
-  min-width: 262px;
-  max-width: 262px;
-  min-height: 368px;
-  max-height: 368px;
-  border-radius: 0px;
+.animeCardHover_insideCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.animeCardHover_insideCard_blackGradient {
+  height: 308px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(#000000));
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, #000000 100%);
-  padding: 20px 10px 0px 10px;
+}
+
+.animeCardHover_insideCard_blackGradient_animeTitle {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -44,118 +71,24 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.animeCard_cardTitle {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px 10px 10px 10px;
   font-family: "Inter";
+  font-size: 23px;
+  letter-spacing: 0px;
+  line-height: 23px;
   font-weight: 700;
-  font-size: 20px;
   text-transform: uppercase;
   color: #ffffff;
-  line-height: 24px;
-  text-align: center;
+}
+
+.animeCardHover_insideCard_blackGradient_bottomInfo {
   width: 100%;
-}
-
-.animeCard_info {
-  width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: inherit;
-      -ms-flex-align: inherit;
-          align-items: inherit;
-}
-
-.animeCard_info_extraInfo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.animeCard_info_extraInfo_synopsis {
-  font-family: "Inter";
-  font-weight: 700;
-  font-size: 12px;
-  text-transform: uppercase;
-  color: #ffffff;
-  line-height: 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.animeCard_info_extraInfo_rightSide {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.animeCard_info_extraInfo_rightSide_subtitle {
-  font-family: "Inter";
-  font-weight: 400;
-  font-size: 12px;
-  text-transform: uppercase;
-  color: #EAA930;
-  line-height: 15px;
-  margin-right: 5px;
-}
-
-.animeCard_info_extraInfo_rightSide_typeMedia {
-  font-family: "Inter";
-  font-weight: 400;
-  font-size: 12px;
-  text-transform: uppercase;
-  color: #47D6D8;
-  line-height: 15px;
-  margin-right: 5px;
-}
-
-.animeCard_info_synopsisText {
-  font-family: "Inter";
-  font-weight: 400;
-  font-size: 12px;
-  text-transform: none;
-  color: #ffffff;
-  line-height: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -165,35 +98,158 @@ body {
           flex-direction: column;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
-          justify-content: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px 10px 10px 10px;
+}
+
+.animeCardHover_insideCard_blackGradient_bottomInfo_timeline {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  margin-top: 10px;
 }
 
-/* .animeCard {
-	background: black;
+.animeCardHover_insideCard_blackGradient_bottomInfo_animeInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 
-	&_titleH1 {
-		@include H1($whiteFontColor);
+.animeCardHover_insideCard_blackGradient_bottomInfo_animeInfo_topInfo {
+  width: 100%;
+  padding: 0 0 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
 
-	}
+.animeCardHover_insideCard_blackGradient_bottomInfo_animeInfo_topInfo_synopsisTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Inter";
+  font-size: 14px;
+  letter-spacing: 0.015em;
+  line-height: 18.2px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+}
 
-	&_titleH2 {
-		@include H2($whiteFontColor);
-	}
+.animeCardHover_insideCard_blackGradient_bottomInfo_animeInfo_topInfo_extraInfo {
+  width: 148px;
+  max-width: 148px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 
-	&_extraInfo {
-		@include pText($orangeFontColor, upper);
-	}
+.animeCardHover_insideCard_blackGradient_bottomInfo_animeInfo_topInfo_extraInfo_subtitle {
+  font-family: "Inter";
+  font-size: 14px;
+  letter-spacing: 0.005em;
+  line-height: 18.2px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #EAA930;
+}
 
-	&_animeType {
-		@include pText($greenFontColor, upper);
-	}
+.animeCardHover_insideCard_blackGradient_bottomInfo_animeInfo_topInfo_extraInfo_mediaType {
+  font-family: "Inter";
+  font-size: 14px;
+  letter-spacing: 0.005em;
+  line-height: 18.2px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #47D6D8;
+}
 
-	&_aboutText {
-		@include pText($whiteFontColor, normal);
-	}
-} */
+.animeCardHover_insideCard_blackGradient_bottomInfo_animeInfo_synopsisText {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  font-family: "Inter";
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  line-height: 18.2px;
+  font-weight: 500;
+  text-transform: none;
+  color: #ffffff;
+}
+
+.animeCardHover_insideCard_playButton {
+  background: radial-gradient(100% 232.26% at 0% 0%, #47D6D8 0%, #2FB5B7 69.79%, #118183 100%);
+  min-height: 60px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 /*# sourceMappingURL=style.css.map */

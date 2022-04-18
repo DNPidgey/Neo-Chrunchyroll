@@ -1,6 +1,6 @@
 /*---------------------Color Palette Chart---------------------*/
 $orangeGradient: radial-gradient(100% 264.06% at 0% 0%, #EDB931 0%, #EDB831 6.67%, #ECB631 13.33%, #ECB231 20%, #EBAC30 26.67%, #E9A530 33.33%, #E89C30 40%, #E6922F 46.67%, #E4882F 53.33%, #E27E2E 60%, #E1752E 66.67%, #DF6E2E 73.33%, #DE682D 80%, #DE642D 86.67%, #DD622D 93.33%, #DD612D 100%);
-$greenGradient: radial-gradient(286.13% 100% at 0% 0%, #47D6D8 0%, #2FB5B7 69.79%, #118183 100%);
+$greenGradient: radial-gradient(100% 232.26% at 0% 0%, #47D6D8 0%, #2FB5B7 69.79%, #118183 100%);
 $blackVerticalGradient: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, #000000 100%);
 $grey70: rgba(117, 117, 117, 0.8);
 $orangeFontColor: #EAA930;
@@ -10,41 +10,147 @@ $whiteFontColor: #ffffff;
 
 /*---------------------Font Characteristics---------------------*/
 $fontCustom: 'Inter';
-$fontWeight: ("regular":400, "bold":700);
+$fontWeight: ("light": 300, "regular":400, "medium":500, "bold":700);
 $fontSize: ("medium":12px, "big":20px);
-$fontStyle: ("normal":none, "upper":uppercase);
+$fontStyle: ("sentence":none, "upper":uppercase);
 
 /*---------------------Main Configs for Fonts. Change just if necessary modify the main format of the fonts---------------------*/
-@mixin H1 ($color) {
+@mixin typography-styles-headline1 ($color) {
 	font-family: $fontCustom;
-	font-weight: map-get($fontWeight, bold);
-	font-size: map-get($fontSize, big);
+	font-size: 93px;
+	letter-spacing: -0.015em;
+	line-height: 93px;
+	font-weight: map-get($fontWeight, regular);
 	text-transform: map-get($fontStyle, upper);
 	color: $color;
-	line-height: 24px;
 }
 
-@mixin H2 ($color) {
+@mixin typography-styles-headline2 ($color) {
 	font-family: $fontCustom;
-	font-weight: map-get($fontWeight, bold);
-	font-size: map-get($fontSize, medium);
+	font-size: 58px;
+	letter-spacing: -0.005em;
+	line-height: 58px;
+	font-weight: map-get($fontWeight, medium);
 	text-transform: map-get($fontStyle, upper);
 	color: $color;
-	line-height: 15px;
 }
 
-@mixin pText ($color, $style, $weight) {
+@mixin typography-styles-headline3 ($color) {
 	font-family: $fontCustom;
-	font-weight: map-get($fontWeight, $weight);
-	font-size: map-get($fontSize, medium);
-	text-transform: map-get($fontStyle, $style);
+	font-size: 47px;
+	letter-spacing: 0px;
+	line-height: 47px;
+	font-weight: map-get($fontWeight, medium);
+	text-transform: map-get($fontStyle, upper);
 	color: $color;
-	line-height: 15px;
+}
+
+@mixin typography-styles-headline4 ($color) {
+	font-family: $fontCustom;
+	font-size: 33px;
+	letter-spacing: 0.0025em;
+	line-height: 33px;
+	font-weight: map-get($fontWeight, bold);
+	text-transform: map-get($fontStyle, upper);
+	color: $color;
+}
+
+@mixin typography-styles-headline5 ($color) {
+	font-family: $fontCustom;
+	font-size: 23px;
+	letter-spacing: 0px;
+	line-height: 23px;
+	font-weight: map-get($fontWeight, bold);
+	text-transform: map-get($fontStyle, upper);
+	color: $color;
+}
+
+@mixin typography-styles-headline6 ($color) {
+	font-family: $fontCustom;
+	font-size: 23px;
+	letter-spacing: 0.012em;
+	line-height: 23px;
+	font-weight: map-get($fontWeight, medium);
+	text-transform: map-get($fontStyle, upper);
+	color: $color;
+}
+
+@mixin typography-styles-subtitle1 ($color) {
+	font-family: $fontCustom;
+	font-size: 14px;
+	letter-spacing: 0.005em;
+	line-height: 18.2px;
+	font-weight: map-get($fontWeight, regular);
+	text-transform: map-get($fontStyle, upper);
+	color: $color;
+}
+
+@mixin typography-styles-subtitle2 ($color) {
+	font-family: $fontCustom;
+	font-size: 14px;
+	letter-spacing: 0.015em;
+	line-height: 18.2px;
+	font-weight: map-get($fontWeight, bold);
+	text-transform: map-get($fontStyle, upper);
+	color: $color;
+}
+
+@mixin typography-styles-body1 ($color) {
+	font-family: $fontCustom;
+	font-size: 16px;
+	letter-spacing: 0.005em;
+	line-height: 20.8px;
+	font-weight: map-get($fontWeight, regular);
+	text-transform: map-get($fontStyle, sentence);
+	color: $color;
+}
+
+@mixin typography-styles-body2 ($color) {
+	font-family: $fontCustom;
+	font-size: 14px;
+	letter-spacing: 0.02em;
+	line-height: 18.2px;
+	font-weight: map-get($fontWeight, medium);
+	text-transform: map-get($fontStyle, sentence);
+	color: $color;
+}
+
+@mixin typography-styles-button ($color) {
+	font-family: $fontCustom;
+	font-size: 20px;
+	letter-spacing: 0.0125em;
+	line-height: 18.2px;
+	font-weight: map-get($fontWeight, bold);
+	text-transform: map-get($fontStyle, upper);
+	color: $color;
+}
+
+@mixin typography-styles-overline ($color) {
+	font-family: $fontCustom;
+	font-size: 10px;
+	letter-spacing: 0.004em;
+	line-height: 18.2px;
+	font-weight: map-get($fontWeight, bold);
+	text-transform: map-get($fontStyle, upper);
+	color: $color;
+}
+
+@mixin typography-styles-caption ($color) {
+	font-family: $fontCustom;
+	font-size: 12px;
+	letter-spacing: 0.015em;
+	line-height: 15.6px;
+	font-weight: map-get($fontWeight, medium);
+	text-transform: map-get($fontStyle, upper);
+	color: $color;
 }
 
 /*---------------------Anime Card Configs---------------------*/
 $imgPath: "../img/";
 $iconPath: "../icon";
+$borderRadius_topCorners: 0px 0px 10px 10px;
+$borderRadius_bottomCorners: 10px 10px 0px 0px;
+$borderRadius_allCorners: 10px;
 
 @mixin imgBG($path, $imgName_ext) {
 	background-image: url("#{$path}#{$imgName_ext}");
@@ -58,4 +164,4 @@ $iconPath: "../icon";
 	border-radius: $borderRadius;
 }
 
-@mixin name {}
+@mixin playButton {}
