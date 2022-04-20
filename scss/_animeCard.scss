@@ -1,12 +1,52 @@
+.cardEnveloping {
+	width: 262px;
+	height: 368px;
+}
+
+.animeCard {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center;
+	width: 262px;
+	height: 368px;
+	border-radius: $borderRadius_allCorners;
+	@include imgBG($imgPath, "drStone.jpg");
+	overflow: hidden;
+	z-index: 1;
+
+	&_timeline {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+		min-height: 6px;
+		width: 100%;
+		background: $grey70;
+	}
+
+	&_timelineTrack {
+		height: 100%;
+		width: 30%;
+		background: $orangeGradient;
+	}
+}
+
 .animeCardHover {
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
 	width: 262px;
 	height: 368px;
+	margin-top: -368px;
 	border-radius: $borderRadius_allCorners;
 	@include imgBG($imgPath, "drStone.jpg");
+	z-index: 2;
+	opacity: 0;
+	transition: opacity $fadeInOpacity ease-in;
 
 	&_blackGradient {
 		height: 308px;
@@ -102,7 +142,34 @@
 		background: $orangeGradient;
 	}
 
-	&_playButton {
+	/* &_playButton {
+		min-height: 60px;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		border-radius: $borderRadius_bottomCorners;
+
+		&--Green{
+			background: $greenGradient;
+			z-index: 3;
+		}
+		&--Orange{
+			margin-top: -60px;
+			background: $orangeGradient;
+			box-shadow: $orangeNeon;
+			z-index: 4;
+			opacity: 0;
+			transition: opacity $fadeInOpacity ease-in;
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+	} */
+
+	&_playButtonGreen {
 		min-height: 60px;
 		width: 100%;
 		display: flex;
@@ -111,10 +178,30 @@
 		align-items: center;
 		background: $greenGradient;
 		border-radius: $borderRadius_bottomCorners;
+		z-index: 3;
+	}
+
+	&_playButtonOrange {
+		min-height: 60px;
+		width: 100%;
+		margin-top: -60px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		background: $orangeGradient;
+		box-shadow: $orangeNeon;
+		border-radius: $borderRadius_bottomCorners;
+		z-index: 4;
+		opacity: 0;
+		transition: opacity $fadeInOpacity ease-in;
 
 		&:hover {
-			background: $orangeGradient;
-			box-shadow: $orangeNeon;
+			opacity: 1;
 		}
+	}
+
+	&:hover {
+		opacity: 1;
 	}
 }
