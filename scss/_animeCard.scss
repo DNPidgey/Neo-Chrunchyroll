@@ -1,9 +1,9 @@
-.cardEnveloping {
+.full-H-cardEnveloping {
 	width: 262px;
 	height: 368px;
 }
 
-.animeCard {
+.full-H-cardEnveloping .animeCard {
 	position: relative;
 	display: flex;
 	flex-direction: column;
@@ -16,7 +16,7 @@
 	overflow: hidden;
 	z-index: 1;
 
-	&_timeline {
+	&__timeline {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -26,14 +26,14 @@
 		background: $grey70;
 	}
 
-	&_timelineTrack {
+	&__timelineTrack {
 		height: 100%;
 		width: 30%;
 		background: $orangeGradient;
 	}
 }
 
-.animeCardHover {
+.full-H-cardEnveloping .animeCardHover {
 	position: relative;
 	display: flex;
 	flex-direction: column;
@@ -48,7 +48,7 @@
 	opacity: 0;
 	transition: opacity $fadeInOpacity ease-in;
 
-	&_blackGradient {
+	&__blackGradient {
 		height: 308px;
 		width: 100%;
 		display: flex;
@@ -59,7 +59,7 @@
 		background: $blackVerticalGradient;
 	}
 
-	&_animeTitle {
+	&__animeTitle {
 		width: 100%;
 		display: flex;
 		flex-direction: column;
@@ -69,7 +69,7 @@
 		@include typography-styles-headline5 ($whiteFontColor);
 	}
 
-	&_bottomInfo {
+	&__bottomInfo {
 		width: 100%;
 		display: flex;
 		flex-direction: column;
@@ -77,7 +77,7 @@
 		align-items: center;
 	}
 
-	&_animeInfo {
+	&__animeInfo {
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-end;
@@ -85,7 +85,7 @@
 		padding: 0px 10px 10px 10px;
 	}
 
-	&_topInfo {
+	&__topInfo {
 		width: 100%;
 		padding: 0 0 10px;
 		display: flex;
@@ -94,14 +94,14 @@
 		align-items: flex-start;
 	}
 
-	&_synopsisTitle {
+	&__synopsisTitle {
 		display: flex;
 		flex-direction: row;
 		align-items: center;
 		@include typography-styles-subtitle2($whiteFontColor);
 	}
 
-	&_extraInfo {
+	&__extraInfo {
 		width: 148px;
 		max-width: 148px;
 		display: flex;
@@ -110,15 +110,15 @@
 		align-items: center;
 	}
 
-	&_subtitleInfo {
+	&__subtitleInfo {
 		@include typography-styles-subtitle1($orangeFontColor);
 	}
 
-	&_mediaType {
+	&__mediaType {
 		@include typography-styles-subtitle1($greenFontColor);
 	}
 
-	&_synopsisText {
+	&__synopsisText {
 		width: 100%;
 		display: flex;
 		flex-direction: row;
@@ -126,7 +126,7 @@
 		@include typography-styles-body2 ($whiteFontColor);
 	}
 
-	&_timeline {
+	&__timeline {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -136,13 +136,13 @@
 		background: $grey70;
 	}
 
-	&_timelineTrack {
+	&__timelineTrack {
 		height: 100%;
 		width: 30%;
 		background: $orangeGradient;
 	}
 
-	/* &_playButton {
+	&__playButton {
 		min-height: 60px;
 		width: 100%;
 		display: flex;
@@ -151,11 +151,12 @@
 		align-items: center;
 		border-radius: $borderRadius_bottomCorners;
 
-		&--Green{
+		&--Green {
 			background: $greenGradient;
 			z-index: 3;
 		}
-		&--Orange{
+
+		&--Orange {
 			margin-top: -60px;
 			background: $orangeGradient;
 			box-shadow: $orangeNeon;
@@ -166,38 +167,6 @@
 			&:hover {
 				opacity: 1;
 			}
-		}
-	} */
-
-	&_playButtonGreen {
-		min-height: 60px;
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		background: $greenGradient;
-		border-radius: $borderRadius_bottomCorners;
-		z-index: 3;
-	}
-
-	&_playButtonOrange {
-		min-height: 60px;
-		width: 100%;
-		margin-top: -60px;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		background: $orangeGradient;
-		box-shadow: $orangeNeon;
-		border-radius: $borderRadius_bottomCorners;
-		z-index: 4;
-		opacity: 0;
-		transition: opacity $fadeInOpacity ease-in;
-
-		&:hover {
-			opacity: 1;
 		}
 	}
 

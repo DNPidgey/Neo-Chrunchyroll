@@ -1,11 +1,10 @@
-/*---------------------Color Palette Chart---------------------*/
-/* $backgroundTeste: radial-gradient(circle at 0 0, rgb(255 0 0), rgba(255, 0, 0, 0) 58%),
-radial-gradient(circle at 00% 80%, rgb(0 0 255), rgba(0, 0, 255, 0) 100%),
-radial-gradient(circle at 100% 100%, rgb(0 255 0), rgba(0, 255, 0, 0) 100%) beige; */
-/*---------------------Font Characteristics---------------------*/
-/*---------------------Main Configs for Fonts. Change just if necessary modify the main format of the fonts---------------------*/
-/*---------------------Anime Card Configs---------------------*/
-/*---------------------Transitions/Animations Settings---------------------*/
+/*----Color Palette Chart----*/
+/*----Font Characteristics----*/
+/*----Main Configs for Fonts. Change just if necessary modify the main format of the fonts----*/
+/*----Anime Card Configs----*/
+/*----Sections Info Config----*/
+/*----HeaderConfig----*/
+/*----Transitions/Animations Settings----*/
 body {
   background-color: black;
   background-size: cover;
@@ -22,12 +21,180 @@ body {
           box-sizing: border-box;
 }
 
-.cardEnveloping {
+a {
+  text-decoration: none;
+}
+
+.header {
+  height: 80px;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: black;
+  border-bottom: 1px solid rgba(117, 117, 117, 0.8);
+  z-index: 99;
+}
+
+.header__menu-search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100px;
+}
+
+.header__userMenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 130px;
+}
+
+.header__usernameMenu {
+  font-family: "Inter";
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  line-height: 18.2px;
+  font-weight: 500;
+  text-transform: none;
+  color: #ffffff;
+}
+
+.header__profilePic {
+  border-radius: 50%;
+  max-height: 50px;
+  max-width: 50px;
+}
+
+.content {
+  margin-top: 95px;
+  padding: 0 124px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.sections {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  min-height: 64px;
+  margin-bottom: 24px;
+}
+
+.sections:after {
+  content: '';
+  display: block;
+  bottom: 0;
+  left: 0;
+  min-height: 3px;
+  width: 100%;
+  background: radial-gradient(100% 232.26% at 0% 0%, #47D6D8 0%, #2FB5B7 69.79%, #118183 100%);
+}
+
+.sections__firstLine {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sections__title {
+  font-family: "Inter";
+  font-size: 23px;
+  letter-spacing: 0px;
+  line-height: 23px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.sections__seeMore {
+  display: inherit;
+  -webkit-box-orient: inherit;
+  -webkit-box-direction: inherit;
+      -ms-flex-direction: inherit;
+          flex-direction: inherit;
+  -webkit-box-pack: inherit;
+      -ms-flex-pack: inherit;
+          justify-content: inherit;
+  font-family: "Inter";
+  font-size: 23px;
+  letter-spacing: 0.012em;
+  line-height: 23px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #47D6D8;
+}
+
+.sections__subtitle {
+  font-family: "Inter";
+  font-size: 16px;
+  letter-spacing: 0.005em;
+  line-height: 20.8px;
+  font-weight: 400;
+  text-transform: none;
+  color: #ffffff;
+}
+
+.full-H-cardEnveloping {
   width: 262px;
   height: 368px;
 }
 
-.animeCard {
+.full-H-cardEnveloping .animeCard {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -50,7 +217,7 @@ body {
   z-index: 1;
 }
 
-.animeCard_timeline {
+.full-H-cardEnveloping .animeCard__timeline {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -69,13 +236,13 @@ body {
   background: rgba(117, 117, 117, 0.8);
 }
 
-.animeCard_timelineTrack {
+.full-H-cardEnveloping .animeCard__timelineTrack {
   height: 100%;
   width: 30%;
   background: radial-gradient(100% 264.06% at 0% 0%, #EDB931 0%, #EDB831 6.67%, #ECB631 13.33%, #ECB231 20%, #EBAC30 26.67%, #E9A530 33.33%, #E89C30 40%, #E6922F 46.67%, #E4882F 53.33%, #E27E2E 60%, #E1752E 66.67%, #DF6E2E 73.33%, #DE682D 80%, #DE642D 86.67%, #DD622D 93.33%, #DD612D 100%);
 }
 
-.animeCardHover {
+.full-H-cardEnveloping .animeCardHover {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -99,35 +266,9 @@ body {
   opacity: 0;
   -webkit-transition: opacity 0.15s ease-in;
   transition: opacity 0.15s ease-in;
-  /* &_playButton {
-		min-height: 60px;
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		border-radius: $borderRadius_bottomCorners;
-
-		&--Green{
-			background: $greenGradient;
-			z-index: 3;
-		}
-		&--Orange{
-			margin-top: -60px;
-			background: $orangeGradient;
-			box-shadow: $orangeNeon;
-			z-index: 4;
-			opacity: 0;
-			transition: opacity $fadeInOpacity ease-in;
-
-			&:hover {
-				opacity: 1;
-			}
-		}
-	} */
 }
 
-.animeCardHover_blackGradient {
+.full-H-cardEnveloping .animeCardHover__blackGradient {
   height: 308px;
   width: 100%;
   display: -webkit-box;
@@ -148,7 +289,7 @@ body {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, #000000 100%);
 }
 
-.animeCardHover_animeTitle {
+.full-H-cardEnveloping .animeCardHover__animeTitle {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -173,7 +314,7 @@ body {
   color: #ffffff;
 }
 
-.animeCardHover_bottomInfo {
+.full-H-cardEnveloping .animeCardHover__bottomInfo {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -190,7 +331,7 @@ body {
           align-items: center;
 }
 
-.animeCardHover_animeInfo {
+.full-H-cardEnveloping .animeCardHover__animeInfo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -207,7 +348,7 @@ body {
   padding: 0px 10px 10px 10px;
 }
 
-.animeCardHover_topInfo {
+.full-H-cardEnveloping .animeCardHover__topInfo {
   width: 100%;
   padding: 0 0 10px;
   display: -webkit-box;
@@ -225,7 +366,7 @@ body {
           align-items: flex-start;
 }
 
-.animeCardHover_synopsisTitle {
+.full-H-cardEnveloping .animeCardHover__synopsisTitle {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -245,7 +386,7 @@ body {
   color: #ffffff;
 }
 
-.animeCardHover_extraInfo {
+.full-H-cardEnveloping .animeCardHover__extraInfo {
   width: 148px;
   max-width: 148px;
   display: -webkit-box;
@@ -263,7 +404,7 @@ body {
           align-items: center;
 }
 
-.animeCardHover_subtitleInfo {
+.full-H-cardEnveloping .animeCardHover__subtitleInfo {
   font-family: "Inter";
   font-size: 14px;
   letter-spacing: 0.005em;
@@ -273,7 +414,7 @@ body {
   color: #EAA930;
 }
 
-.animeCardHover_mediaType {
+.full-H-cardEnveloping .animeCardHover__mediaType {
   font-family: "Inter";
   font-size: 14px;
   letter-spacing: 0.005em;
@@ -283,7 +424,7 @@ body {
   color: #47D6D8;
 }
 
-.animeCardHover_synopsisText {
+.full-H-cardEnveloping .animeCardHover__synopsisText {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -304,7 +445,7 @@ body {
   color: #ffffff;
 }
 
-.animeCardHover_timeline {
+.full-H-cardEnveloping .animeCardHover__timeline {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -323,13 +464,13 @@ body {
   background: rgba(117, 117, 117, 0.8);
 }
 
-.animeCardHover_timelineTrack {
+.full-H-cardEnveloping .animeCardHover__timelineTrack {
   height: 100%;
   width: 30%;
   background: radial-gradient(100% 264.06% at 0% 0%, #EDB931 0%, #EDB831 6.67%, #ECB631 13.33%, #ECB231 20%, #EBAC30 26.67%, #E9A530 33.33%, #E89C30 40%, #E6922F 46.67%, #E4882F 53.33%, #E27E2E 60%, #E1752E 66.67%, #DF6E2E 73.33%, #DE682D 80%, #DE642D 86.67%, #DD622D 93.33%, #DD612D 100%);
 }
 
-.animeCardHover_playButtonGreen {
+.full-H-cardEnveloping .animeCardHover__playButton {
   min-height: 60px;
   width: 100%;
   display: -webkit-box;
@@ -345,43 +486,30 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: radial-gradient(100% 232.26% at 0% 0%, #47D6D8 0%, #2FB5B7 69.79%, #118183 100%);
   border-radius: 0px 0px 10px 10px;
+}
+
+.full-H-cardEnveloping .animeCardHover__playButton--Green {
+  background: radial-gradient(100% 232.26% at 0% 0%, #47D6D8 0%, #2FB5B7 69.79%, #118183 100%);
   z-index: 3;
 }
 
-.animeCardHover_playButtonOrange {
-  min-height: 60px;
-  width: 100%;
+.full-H-cardEnveloping .animeCardHover__playButton--Orange {
   margin-top: -60px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   background: radial-gradient(100% 264.06% at 0% 0%, #EDB931 0%, #EDB831 6.67%, #ECB631 13.33%, #ECB231 20%, #EBAC30 26.67%, #E9A530 33.33%, #E89C30 40%, #E6922F 46.67%, #E4882F 53.33%, #E27E2E 60%, #E1752E 66.67%, #DF6E2E 73.33%, #DE682D 80%, #DE642D 86.67%, #DD622D 93.33%, #DD612D 100%);
   -webkit-box-shadow: 0px 7px 5.32px rgba(255, 196, 43, 0.06), 0px 16px 17.87px rgba(255, 196, 43, 0.08), 0px 8px 33.42px rgba(255, 196, 43, 0.12), 0px 33px 80px rgba(255, 196, 43, 0.16);
           box-shadow: 0px 7px 5.32px rgba(255, 196, 43, 0.06), 0px 16px 17.87px rgba(255, 196, 43, 0.08), 0px 8px 33.42px rgba(255, 196, 43, 0.12), 0px 33px 80px rgba(255, 196, 43, 0.16);
-  border-radius: 0px 0px 10px 10px;
   z-index: 4;
   opacity: 0;
   -webkit-transition: opacity 0.15s ease-in;
   transition: opacity 0.15s ease-in;
 }
 
-.animeCardHover_playButtonOrange:hover {
+.full-H-cardEnveloping .animeCardHover__playButton--Orange:hover {
   opacity: 1;
 }
 
-.animeCardHover:hover {
+.full-H-cardEnveloping .animeCardHover:hover {
   opacity: 1;
 }
 /*# sourceMappingURL=style.css.map */

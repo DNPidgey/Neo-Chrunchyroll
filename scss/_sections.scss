@@ -1,0 +1,25 @@
+.sections {
+	@include sectionsStructure;
+
+	&__firstLine {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__title {
+		@include typography-styles-headline5($whiteFontColor);
+	}
+
+	&__seeMore {
+		display: inherit;
+		flex-direction: inherit;
+		justify-content: inherit;
+		@include typography-styles-headline6($greenFontColor);
+	}
+
+	&__subtitle {
+		@include typography-styles-body1($whiteFontColor);
+	}
+}
